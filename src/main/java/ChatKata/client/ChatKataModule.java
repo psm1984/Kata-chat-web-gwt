@@ -73,7 +73,7 @@ public class ChatKataModule implements EntryPoint {
     dialogVPanel.addStyleName("dialogVPanel");
     dialogVPanel.add(new HTML("<b>Sending name to the server:</b>"));
     dialogVPanel.add(textToServerLabel);
-    dialogVPanel.add(new HTML("<br><b>Server replies:</b>"));
+    dialogVPanel.add(new HTML("<b:Icon type=\"CAMERA_RETRO\" />"));
     dialogVPanel.add(serverResponseLabel);
     dialogVPanel.setHorizontalAlignment(VerticalPanel.ALIGN_RIGHT);
     dialogVPanel.add(closeButton);
@@ -107,12 +107,25 @@ public class ChatKataModule implements EntryPoint {
         if (source.equals(nameField)) {
 
           if (event.getNativeKeyCode() == KeyCodes.KEY_ENTER) {
-            sendNameToServer();
+            //sendNameToServer();
+              passwordTextBox.setFocus(true);
           } else {
-
+              if (!FieldVerifier.isValidName(nameField.getText())) {
+                  nameFieldCheck.setText("x");
+              }else{
+                  nameFieldCheck.setText("v");
+              }
           }
         } else if(source.equals(passwordTextBox)) {
-
+            if (event.getNativeKeyCode() == KeyCodes.KEY_ENTER) {
+                sendNameToServer();
+            } else {
+                if (!FieldVerifier.isValidName(passwordTextBox.getText())) {
+                    passwordFieldCheck.setText("g");
+                }else{
+                    passwordFieldCheck.setText("v");
+                }
+            }
 
         }
       }
