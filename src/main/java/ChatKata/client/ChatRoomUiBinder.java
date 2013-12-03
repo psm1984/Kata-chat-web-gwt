@@ -2,8 +2,8 @@ package ChatKata.client;
 
 
 import com.github.gwtbootstrap.client.ui.Button;
+import com.github.gwtbootstrap.client.ui.InputAddOn;
 import com.github.gwtbootstrap.client.ui.PasswordTextBox;
-import com.github.gwtbootstrap.client.ui.SubmitButton;
 import com.github.gwtbootstrap.client.ui.TextBox;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
@@ -18,36 +18,30 @@ import com.google.gwt.user.client.ui.HTMLPanel;
  * Date: 3/12/13
  * Time: 16:02
  */
-public class ChatKataModuleUiBinder extends Composite {
-    @UiField
+public class ChatRoomUiBinder extends Composite {
+   /* @UiField
     TextBox username;
-
     @UiField
     PasswordTextBox password;
 
+    @UiField
+    InputAddOn usernameCheck;
+    @UiField
+    InputAddOn passwordCheck;
 
 
     @UiField
-    Button sendButton;
+    Button sendButton;*/
 
-    interface ExampleUiBinderUiBinder extends UiBinder<HTMLPanel, ChatKataModuleUiBinder> {
+
+    interface ExampleUiBinderUiBinder extends UiBinder<HTMLPanel, ChatRoomUiBinder> {
     }
 
     private static ExampleUiBinderUiBinder ourUiBinder = GWT.create(ExampleUiBinderUiBinder.class);
 
-    public ChatKataModuleUiBinder() {
+    public ChatRoomUiBinder() {
         initWidget(ourUiBinder.createAndBindUi(this));
     }
 
-    public TextBox getUsername() {
-        return username;
-    }
 
-    public PasswordTextBox getPassword(){
-        return password;
-    }
-
-    public Button getSendButton() {
-        return sendButton;
-    }
 }
