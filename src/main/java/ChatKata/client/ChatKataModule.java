@@ -1,33 +1,71 @@
 package ChatKata.client;
 
-import ChatKata.shared.FieldVerifier;
+
+import com.github.gwtbootstrap.client.ui.Button;
+import com.github.gwtbootstrap.client.ui.PasswordTextBox;
+import com.github.gwtbootstrap.client.ui.SubmitButton;
+import com.github.gwtbootstrap.client.ui.TextBox;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.event.dom.client.KeyCodes;
 import com.google.gwt.event.dom.client.KeyUpEvent;
 import com.google.gwt.event.dom.client.KeyUpHandler;
-import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.*;
 
-import sun.security.util.Password;
+import com.google.gwt.user.client.ui.RootPanel;
+
 
 public class ChatKataModule implements EntryPoint {
 
-  private static final String SERVER_ERROR = "An error occurred while "
-      + "attempting to contact the server. Please check your network "
-      + "connection and try again.";
+    private final GreetingServiceAsync greetingService = GWT.create(GreetingService.class);
+    private final Messages messages = GWT.create(Messages.class);
+
+    private TextBox username;
+    private PasswordTextBox password;
+    private Button button;
 
 
-  private final GreetingServiceAsync greetingService = GWT.create(GreetingService.class);
-  private final Messages messages = GWT.create(Messages.class);
+    public void onModuleLoad() {
+        ChatKataModuleUiBinder ourUiBinder = new ChatKataModuleUiBinder();
+        RootPanel.get().add(ourUiBinder);
+        username = ourUiBinder.getUsername();
+               username.addKeyUpHandler(new KeyUpHandler() {
+                public void onKeyUp(KeyUpEvent keyUpEvent) {
+                    username.setText("Hola");
+                }
+            });
+
+        password = ourUiBinder.getPassword();
+        password.addKeyUpHandler(new KeyUpHandler() {
+            public void onKeyUp(KeyUpEvent keyUpEvent) {
+                username.setText("Hola");
+            }
+        });
+
+        button = ourUiBinder.getSendButton();
+        button.addClickHandler(new ClickHandler() {
+            public void onClick(ClickEvent event) {
+                username.setText("Hola");
+            }
+        });
+    }
 
 
-  public void onModuleLoad() {
+
+
+  /*public void onModuleLoad2() {
+      DockLayoutPanel outer;
+      outer = binder.createAndBindUi(this);
+      RootLayoutPanel root = RootLayoutPanel.get();
+      root.add(outer);
+      //root.layout();
+
+
+
     final Button sendButton = new Button( messages.sendButton() );
     final TextBox nameField = new TextBox();
     final PasswordTextBox passwordTextBox = new PasswordTextBox();
+
 
 
     final Label nameFieldCheck     = new Label();
@@ -90,16 +128,11 @@ public class ChatKataModule implements EntryPoint {
 
     // Create a handler for the sendButton and nameField
     class MyHandler implements ClickHandler, KeyUpHandler {
-      /**
-       * Fired when the user clicks on the sendButton.
-       */
+
       public void onClick(ClickEvent event) {
         sendNameToServer();
       }
 
-      /**
-       * Fired when the user types in the nameField.
-       */
       public void onKeyUp(KeyUpEvent event) {
           //final TextBox nameField = new TextBox();
           //final PasswordTextBox passwordTextBox = new PasswordTextBox();
@@ -130,9 +163,7 @@ public class ChatKataModule implements EntryPoint {
         }
       }
 
-      /**
-       * Send the name from the nameField to the server and wait for a response.
-       */
+
       private void sendNameToServer() {
         // First, we validate the input.
         errorLabel.setText("");
@@ -173,5 +204,7 @@ public class ChatKataModule implements EntryPoint {
     sendButton.addClickHandler(handler);
     nameField.addKeyUpHandler(handler);
     passwordTextBox.addKeyUpHandler(handler);
-  }
+
+
+  }      */
 }
