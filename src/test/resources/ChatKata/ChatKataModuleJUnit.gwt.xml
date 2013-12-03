@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='ChatKata.ChatKataModule' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/ChatKataModule/greet" class="ChatKata.server.GreetingServiceImpl" />
+
+</module>
