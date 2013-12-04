@@ -7,37 +7,40 @@
                 <b:Brand>Chat Kata</b:Brand>
             </b:Navbar>
 
-            <b:Hero ui:field="loginPanel">
-                <b:Heading size="1">Login</b:Heading>
+            <b:Collapse ui:field="loginPanelCollapse" defaultOpen="true">
+                <b:Container>
+                    <b:Hero ui:field="loginPanel">
+                        <b:Heading size="1">Login</b:Heading>
+                        <b:Form type="HORIZONTAL">
+                            <b:Pagination alignment="centered">
+                                <b:Fieldset>
+                                    <b:ControlGroup>
+                                        <b:ControlLabel for="input01">Username</b:ControlLabel>
+                                        <b:Controls>
 
+                                            <b:InputAddOn ui:field="usernameCheck" appendIcon="MINUS">
+                                                <b:TextBox ui:field="username" alternateSize="SMALL"
+                                                           placeholder="Username"/>
+                                            </b:InputAddOn>
 
-                <b:Form type="HORIZONTAL">
-                    <b:Pagination alignment="centered">
-                        <b:Fieldset>
-                            <b:ControlGroup>
-                                <b:ControlLabel for="input01">Username</b:ControlLabel>
-                                <b:Controls>
+                                        </b:Controls>
+                                        <b:ControlLabel for="input01">Password</b:ControlLabel>
+                                        <b:Controls>
+                                            <b:InputAddOn ui:field="passwordCheck" appendIcon="MINUS">
+                                                <b:PasswordTextBox ui:field="password" alternateSize="SMALL"
+                                                                   placeholder="Passowrd"/>
+                                            </b:InputAddOn>
+                                        </b:Controls>
 
-                                    <b:InputAddOn ui:field="usernameCheck" appendIcon="MINUS">
-                                        <b:TextBox ui:field="username" alternateSize="SMALL" placeholder="Username"/>
-                                    </b:InputAddOn>
+                                        <b:Button ui:field="sendButton" addStyleNames="btn">Log in</b:Button>
+                                    </b:ControlGroup>
+                                </b:Fieldset>
+                            </b:Pagination>
+                        </b:Form>
+                    </b:Hero>
+                </b:Container>
 
-                                </b:Controls>
-                                <b:ControlLabel for="input01">Password</b:ControlLabel>
-                                <b:Controls>
-                                    <b:InputAddOn ui:field="passwordCheck" appendIcon="MINUS">
-                                        <b:PasswordTextBox ui:field="password" alternateSize="SMALL"
-                                                           placeholder="Passowrd"/>
-                                    </b:InputAddOn>
-                                </b:Controls>
-
-                                <b:Button ui:field="sendButton" addStyleNames="btn">Log in</b:Button>
-                            </b:ControlGroup>
-                        </b:Fieldset>
-                    </b:Pagination>
-                </b:Form>
-            </b:Hero>
-
+            </b:Collapse>
         </b:Container>
 
 

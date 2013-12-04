@@ -38,6 +38,8 @@ public class LoginViewUiBinder extends Composite implements ILoginView {
     InputAddOn passwordCheck;
     @UiField
     Button sendButton;
+    @UiField
+    Collapse loginPanelCollapse;
 
     private ILoginPresenter loginPresenter;
 
@@ -115,7 +117,8 @@ public class LoginViewUiBinder extends Composite implements ILoginView {
     }
 
     private void closeLogin() {
-        loginPanel.removeFromParent();
+        loginPanelCollapse.toggle();
+        //loginPanel.removeFromParent();
     }
 
 }
