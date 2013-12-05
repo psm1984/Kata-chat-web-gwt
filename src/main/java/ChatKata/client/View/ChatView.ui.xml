@@ -4,16 +4,12 @@
 
     <g:HTMLPanel>
         <b:Container>
-            <b:Navbar>
-                <b:Brand>Chat Kata</b:Brand>
-            </b:Navbar>
-
-            <b:Collapse ui:field="loginPanelCollapse" defaultOpen="true">
+            <b:Collapse ui:field="loginPanelCollapse" defaultOpen="false">
                 <b:Container>
                     <b:Hero ui:field="chatPanel">
                         <b:Heading ui:field="welcomeMessage" size="2"></b:Heading>
 
-                        <b:DataGrid ui:field="exampleDataGrid"
+                        <b:DataGrid ui:field="messageDataGrid"
                                     bordered="true" condensed="false" striped="true"
                                     height="300px" width="100%"/>
                         <b:WellForm type="INLINE">

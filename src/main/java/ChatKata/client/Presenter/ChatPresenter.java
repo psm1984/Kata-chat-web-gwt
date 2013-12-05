@@ -8,7 +8,6 @@ import ChatKata.client.View.ChatViewUiBinderHandlers;
 import ChatKata.client.controller.ComunicationService;
 import ChatKata.client.controller.IComunicationServiceResponse;
 import com.google.gwt.event.shared.EventBus;
-import com.google.gwt.user.client.Window;
 import com.gwtplatform.mvp.client.HasUiHandlers;
 import com.gwtplatform.mvp.client.Presenter;
 import com.gwtplatform.mvp.client.View;
@@ -18,7 +17,6 @@ import com.gwtplatform.mvp.client.proxy.Place;
 import com.gwtplatform.mvp.client.proxy.PlaceManager;
 import com.gwtplatform.mvp.client.proxy.ProxyPlace;
 import com.gwtplatform.mvp.client.proxy.RevealRootContentEvent;
-import com.sun.java.swing.plaf.windows.resources.windows;
 
 import javax.inject.Inject;
 import java.util.List;
@@ -29,17 +27,37 @@ import java.util.List;
  * Date: 4/12/13
  * Time: 9:36
  */
-public class ChatPresenter extends Presenter<ChatPresenter.MyView, ChatPresenter.MyProxy>
-        implements ChatViewUiBinderHandlers, IComunicationServiceResponse {
+public class ChatPresenter implements ChatViewUiBinderHandlers,IComunicationServiceResponse {
     public static final String nameToken = "chat";
-    private final PlaceManager placeManager;
-    private final String userName;
-    private final MyView view;
-    private final ComunicationService comunicationService;
-    private int nextSeq;
+    private String userName;
+    private MyView view;
+    private static ChatPresenter chatPresenter;
+    private ComunicationService comunicationService;
+    private int nextSeq = 0;
+
+    public interface MyView  {
+        void setUiHandlers(ChatViewUiBinderHandlers handler);
+        void setUsername(String userName);
+        void messageSendedOK();
+        void messageSendedError();
+        void refreshMessages();
+        void tooggleCollapse();
+    }
+
+
+    private ChatPresenter() {
+          comunicationService = new ComunicationService("http://localhost:8080");
+    }
+
+
+
+
+    public static ChatPresenter getChatPresenter (){
+        if (chatPresenter==null) chatPresenter = new ChatPresenter();
+        return chatPresenter;
+    }
 
     public void GETFail() {
-        view.messageSendedError();
 
     }
 
@@ -63,37 +81,22 @@ public class ChatPresenter extends Presenter<ChatPresenter.MyView, ChatPresenter
     }
 
 
-    @ProxyStandard
-    @NameToken(nameToken)
-    public interface MyProxy extends ProxyPlace<ChatPresenter>, Place {
-    }
-
-    public interface MyView extends View, HasUiHandlers<ChatViewUiBinderHandlers> {
-        void setUsername(String userName);
-
-        void messageSendedOK();
-
-        void messageSendedError();
-
-        void refreshMessages();
-    }
-
-    @Inject
-    public ChatPresenter(EventBus eventBus, MyView view, MyProxy proxy,
-                         PlaceManager placeManager) {
-        super(eventBus, view, proxy);
-        userName = placeManager.getCurrentPlaceRequest().getParameter("loginName", "testUser");
+    public void setIView(MyView view){
         this.view = view;
         view.setUiHandlers(this);
-        view.setUsername(userName);
-        this.placeManager = placeManager;
-        this.comunicationService = new ComunicationService("http://localhost:8080");
     }
 
-    @Override
-    protected void revealInParent() {
-        RevealRootContentEvent.fire(this, this);
+    public void setUserName(String userName){
+        this.userName = userName;
+        view.setUsername(userName);
     }
+
+    public void reveal() {
+        view.tooggleCollapse();
+    }
+
+
+
 
 
     public void sendMessage(String message) {
@@ -101,5 +104,15 @@ public class ChatPresenter extends Presenter<ChatPresenter.MyView, ChatPresenter
 
     }
 
+        /*
+        Timer t = new Timer() {
+        @Override
+            public void run() {
+                listMessages.add(new ChatMessage("Nick ", "Message " ));
+                 refreshMessages();
+            }
+        };
+        t.scheduleRepeating(2000);    */
+    
 
 }

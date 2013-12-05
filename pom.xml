@@ -36,12 +36,6 @@
             <!-- Remove for GWTP 0.5.1 and earlier -->
         </dependency>
         <!-- Tester component -->
-        <dependency>
-            <groupId>com.gwtplatform</groupId>
-            <artifactId>gwtp-tester</artifactId>
-            <version>${gwtp.version}</version>
-            <scope>test</scope>
-        </dependency>
 
 
         <dependency>

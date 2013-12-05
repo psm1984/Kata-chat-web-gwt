@@ -7,17 +7,18 @@ import ChatKata.client.Presenter.ChatPresenter;
 import com.github.gwtbootstrap.client.ui.*;
 import com.github.gwtbootstrap.client.ui.constants.ButtonType;
 import com.github.gwtbootstrap.client.ui.constants.IconType;
+import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.cellview.client.TextColumn;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.HTMLPanel;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.view.client.ListDataProvider;
-import com.gwtplatform.mvp.client.ViewWithUiHandlers;
 
-import javax.inject.Inject;
 import java.util.List;
 
 /**
@@ -28,7 +29,7 @@ import java.util.List;
  */
 
 
-public class ChatView extends ViewWithUiHandlers<ChatViewUiBinderHandlers> implements ChatPresenter.MyView {
+public class ChatView extends Composite implements ChatPresenter.MyView {
     @UiField
     Heading welcomeMessage;
     @UiField
@@ -38,24 +39,25 @@ public class ChatView extends ViewWithUiHandlers<ChatViewUiBinderHandlers> imple
     @UiField
     Collapse loginPanelCollapse;
     @UiField
-    DataGrid<ChatMessage> exampleDataGrid;
+    DataGrid<ChatMessage> messageDataGrid;
     private String username;
     private ListDataProvider<ChatMessage> dataProvider = new ListDataProvider<ChatMessage>();
-    private final Widget widget;
 
 
-    public interface Binder extends UiBinder<Widget, ChatView> {
-    }
+    private ChatViewUiBinderHandlers handler;
 
-    public Widget asWidget() {
-        return widget;
-    }
 
-    @Inject
-    public ChatView(Binder uiBinder) {
-        widget = uiBinder.createAndBindUi(this);
+    interface ExampleUiBinderUiBinder extends UiBinder<HTMLPanel, ChatView> {}
+    private static ExampleUiBinderUiBinder ourUiBinder = GWT.create(ExampleUiBinderUiBinder.class);
+
+
+
+
+    public ChatView() {
+        initWidget(ourUiBinder.createAndBindUi(this));
         configureDataList();
     }
+
 
     public void collapseToggle() {
         loginPanelCollapse.toggle();
@@ -68,10 +70,10 @@ public class ChatView extends ViewWithUiHandlers<ChatViewUiBinderHandlers> imple
         List<ChatMessage> listMessages = ChatState.getChatState().getMessages();
        // for (int i = 0; i < 20; i++) listMessages.add(new ChatMessage("Nick " + i, "Message " + i));
         dataProvider.setList(listMessages);
-        dataProvider.addDataDisplay(exampleDataGrid);
-        exampleDataGrid.setEmptyTableWidget(new Label("Please add data."));
+        dataProvider.addDataDisplay(messageDataGrid);
+        messageDataGrid.setEmptyTableWidget(new Label("Please add data."));
         ButtonCell buttonCell = new ButtonCell(IconType.REMOVE, ButtonType.DANGER);
-        final TooltipCellDecorator<String> decorator = new TooltipCellDecorator<String>(buttonCell);
+
         TextColumn<ChatMessage> nickColum = new TextColumn<ChatMessage>() {
 
             @Override
@@ -86,17 +88,20 @@ public class ChatView extends ViewWithUiHandlers<ChatViewUiBinderHandlers> imple
                 return object.getMessage();
             }
         };
-        exampleDataGrid.setPageSize(500);
-        exampleDataGrid.addColumn(nickColum);
-        exampleDataGrid.addColumn(messageColum);
-        exampleDataGrid.setColumnWidth(0, "10%");
-        exampleDataGrid.setBordered(false);
+        messageDataGrid.setPageSize(500);
+        messageDataGrid.addColumn(nickColum);
+        messageDataGrid.addColumn(messageColum);
+        messageDataGrid.setColumnWidth(0, "10%");
+        messageDataGrid.setBordered(false);
+        final TooltipCellDecorator<String> decorator = new TooltipCellDecorator<String>(buttonCell);
+
+
+
+
     }
 
     @UiHandler("sendButton")
     void onGlobalClicked(ClickEvent event) {
-
-        ChatViewUiBinderHandlers handler = getUiHandlers();
         if (handler != null) handler.sendMessage(messageToSend.getText());
     }
 
@@ -119,12 +124,17 @@ public class ChatView extends ViewWithUiHandlers<ChatViewUiBinderHandlers> imple
         dataProvider.refresh();
     }
 
-    //
+    public void tooggleCollapse() {
+        loginPanelCollapse.toggle();
+    }
 
     public void setUsername(String userName) {
         welcomeMessage.setText("Welcome <i>" + userName + "</i>!");
     }
 
+    public void setUiHandlers(ChatViewUiBinderHandlers handler) {
+        this.handler = handler;
+    }
 
     public void updateMessages() {
     }
