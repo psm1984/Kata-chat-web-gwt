@@ -1,6 +1,5 @@
 package ChatKata.server;
 
-import ChatKata.client.GreetingService;
 import ChatKata.shared.FieldVerifier;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
@@ -8,8 +7,7 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
  * The server side implementation of the RPC service.
  */
 @SuppressWarnings("serial")
-public class GreetingServiceImpl extends RemoteServiceServlet implements
-    GreetingService {
+public class GreetingServiceImpl extends RemoteServiceServlet  {
 
   public String greetServer(String input) throws IllegalArgumentException {
     // Verify that the input is valid.

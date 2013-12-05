@@ -12,6 +12,7 @@ import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.cellview.client.TextColumn;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.view.client.ListDataProvider;
 import com.gwtplatform.mvp.client.ViewWithUiHandlers;
@@ -65,7 +66,7 @@ public class ChatView extends ViewWithUiHandlers<ChatViewUiBinderHandlers> imple
         this.username = username;
 
         List<ChatMessage> listMessages = ChatState.getChatState().getMessages();
-        for (int i = 0; i < 20; i++) listMessages.add(new ChatMessage("Nick " + i, "Message " + i));
+       // for (int i = 0; i < 20; i++) listMessages.add(new ChatMessage("Nick " + i, "Message " + i));
         dataProvider.setList(listMessages);
         dataProvider.addDataDisplay(exampleDataGrid);
         exampleDataGrid.setEmptyTableWidget(new Label("Please add data."));
@@ -75,14 +76,14 @@ public class ChatView extends ViewWithUiHandlers<ChatViewUiBinderHandlers> imple
 
             @Override
             public String getValue(ChatMessage object) {
-                return object.nick;
+                return object.getNick();
             }
         };
         TextColumn<ChatMessage> messageColum = new TextColumn<ChatMessage>() {
 
             @Override
             public String getValue(ChatMessage object) {
-                return object.message;
+                return object.getMessage();
             }
         };
         exampleDataGrid.setPageSize(500);
@@ -111,6 +112,7 @@ public class ChatView extends ViewWithUiHandlers<ChatViewUiBinderHandlers> imple
 
     public void messageSendedError() {
         changeInputState(true);
+        Window.alert("Couldn't retrieve JSON");
     }
 
     public void refreshMessages() {

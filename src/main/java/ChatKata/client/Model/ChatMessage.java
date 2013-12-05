@@ -12,9 +12,9 @@ import java.util.List;
  */
 public class ChatMessage implements IChatMessage{
     //  @SerializedName("message")
-    public String message;
+    private String message;
     // @SerializedName("nick")
-    public String nick;
+    private String nick;
 
     public ChatMessage(String user, String message_text) {
         this.message = message_text;
@@ -32,7 +32,7 @@ public class ChatMessage implements IChatMessage{
 
 
     public String getMessage() {
-        return null;
+        return message;
     }
 
     public void setMessage(String message) {
@@ -40,7 +40,7 @@ public class ChatMessage implements IChatMessage{
     }
 
     public String getNick() {
-        return null;
+        return nick;
     }
 
     public void setNick(String nick) {

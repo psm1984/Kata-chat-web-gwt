@@ -1,5 +1,7 @@
 package ChatKata.client.Model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Vector;
 
 /**
@@ -9,11 +11,11 @@ import java.util.Vector;
  * Time: 10:13
  */
 public class ChatState {
-    private Vector<ChatMessage> messagesInChatSession;
+    private List<ChatMessage> messagesInChatSession;
     private static ChatState chatState = null;
 
     private ChatState() {
-        messagesInChatSession = new Vector<ChatMessage>();
+        messagesInChatSession = new ArrayList<ChatMessage>();
     }
 
     public static ChatState getChatState() {
@@ -21,7 +23,7 @@ public class ChatState {
         return chatState;
     }
 
-    public Vector<ChatMessage> getMessages() {
+    public List<ChatMessage> getMessages() {
         return messagesInChatSession;
     }
 

@@ -28,7 +28,7 @@ public class ServerComunicationModel {
 
         public Vector<ChatMessage> getLastMessages() throws IOException, ParseNetResultException {
             String json = GET();
-            return parserJSON(json);
+            return decodeJSON(json);
         }
 
         public boolean sendMessage(String message_text) throws Exception {
@@ -55,7 +55,7 @@ public class ServerComunicationModel {
             return result;
         }
 
-        private Vector<ChatMessage> parserJSON(String json) throws ParseNetResultException {
+        private Vector<ChatMessage> decodeJSON(String json) throws ParseNetResultException {
             try{
                 Gson gson = new Gson();
                 IResponse response = gson.fromJson(json, IResponse.class );
