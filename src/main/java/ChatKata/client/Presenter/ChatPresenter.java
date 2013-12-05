@@ -8,6 +8,7 @@ import ChatKata.client.View.ChatViewUiBinderHandlers;
 import ChatKata.client.controller.ComunicationService;
 import ChatKata.client.controller.IComunicationServiceResponse;
 import com.google.gwt.event.shared.EventBus;
+import com.google.gwt.user.client.Timer;
 import com.gwtplatform.mvp.client.HasUiHandlers;
 import com.gwtplatform.mvp.client.Presenter;
 import com.gwtplatform.mvp.client.View;
@@ -33,7 +34,6 @@ public class ChatPresenter implements ChatViewUiBinderHandlers,IComunicationServ
     private MyView view;
     private static ChatPresenter chatPresenter;
     private ComunicationService comunicationService;
-    private int nextSeq = 0;
 
     public interface MyView  {
         void setUiHandlers(ChatViewUiBinderHandlers handler);
@@ -44,13 +44,9 @@ public class ChatPresenter implements ChatViewUiBinderHandlers,IComunicationServ
         void tooggleCollapse();
     }
 
-
     private ChatPresenter() {
           comunicationService = new ComunicationService("http://localhost:8080");
     }
-
-
-
 
     public static ChatPresenter getChatPresenter (){
         if (chatPresenter==null) chatPresenter = new ChatPresenter();
@@ -62,7 +58,9 @@ public class ChatPresenter implements ChatViewUiBinderHandlers,IComunicationServ
     }
 
     public void GETSuccessful(IResponse response) {
-        //this.nextSeq = response.getNextSeq();
+        ChatState chatState = ChatState.getChatState();
+        chatState.setNextSeq(response.getNextSeq());
+
         List<IChatMessage> messages = response.getMessages();
         for(IChatMessage message : messages){
             ChatState.getChatState().getMessages().add(new ChatMessage(message.getNick(), message.getMessage()));
@@ -76,8 +74,6 @@ public class ChatPresenter implements ChatViewUiBinderHandlers,IComunicationServ
 
     public void POSTSuccessful() {
         view.messageSendedOK();
-        comunicationService.GET(this, "/chat-kata/api/chat?next_seq=", nextSeq);
-
     }
 
 
@@ -93,26 +89,34 @@ public class ChatPresenter implements ChatViewUiBinderHandlers,IComunicationServ
 
     public void reveal() {
         view.tooggleCollapse();
+        startGetMessages();
     }
 
 
+    public void getMessages(){
+        ChatState chatState = ChatState.getChatState();
+        int nextSeq = chatState.getNextSeq();
+        comunicationService.GET(this, "/chat-kata/api/chat?next_seq=", nextSeq);
+    }
 
+
+    public void startGetMessages(){
+        Timer t = new Timer() {
+            @Override
+            public void run() {
+                getMessages();
+            }
+        };
+        t.scheduleRepeating(500);
+    }
 
 
     public void sendMessage(String message) {
-       comunicationService.POST(this, "/chat-kata/api/chat","nick", "message");
-
+        if (message.length()>0)  comunicationService.POST(this, "/chat-kata/api/chat",userName, message);
+        else view.messageSendedOK();
     }
 
-        /*
-        Timer t = new Timer() {
-        @Override
-            public void run() {
-                listMessages.add(new ChatMessage("Nick ", "Message " ));
-                 refreshMessages();
-            }
-        };
-        t.scheduleRepeating(2000);    */
+
     
 
 }

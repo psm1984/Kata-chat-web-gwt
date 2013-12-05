@@ -13,6 +13,8 @@ import java.util.Vector;
 public class ChatState {
     private List<ChatMessage> messagesInChatSession;
     private static ChatState chatState = null;
+    private int nextSeq = 0;
+
 
     private ChatState() {
         messagesInChatSession = new ArrayList<ChatMessage>();
@@ -25,6 +27,14 @@ public class ChatState {
 
     public List<ChatMessage> getMessages() {
         return messagesInChatSession;
+    }
+
+    public int getNextSeq() {
+        return nextSeq;
+    }
+
+    public void setNextSeq(int nextSeq) {
+        this.nextSeq = nextSeq;
     }
 
 
