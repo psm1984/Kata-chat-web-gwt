@@ -10,10 +10,10 @@
                 <b:DataGrid ui:field="exampleDataGrid"
                             bordered="true" condensed="false" striped="true"
                             height="300px" width="100%"/>
-                <b:Container>
-                    <b:TextBox ui:field="messageToSend" alternateSize="LARGE" placeholder="Message"/>
-                    <b:Button ui:field="sendButton" addStyleNames="btn">Send message</b:Button>
-                </b:Container>
+                <b:WellForm type="INLINE">
+                    <b:TextBox ui:field="messageToSend" alternateSize="LARGE" placeholder="Message" width="81%" />
+                    <b:Button ui:field="sendButton" addStyleNames="btn" width="15%">Send message</b:Button>
+                </b:WellForm>
             </b:Hero>
         </b:Container>
     </g:HTMLPanel>

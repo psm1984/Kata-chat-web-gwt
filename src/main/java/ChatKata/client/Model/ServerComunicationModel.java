@@ -58,7 +58,7 @@ public class ServerComunicationModel {
         private Vector<ChatMessage> parserJSON(String json) throws ParseNetResultException {
             try{
                 Gson gson = new Gson();
-                Response response = gson.fromJson(json, Response.class );
+                IResponse response = gson.fromJson(json, IResponse.class );
                 last_seq = response.nextSeq;
                 storeLastSeq();
                 return response.messages;

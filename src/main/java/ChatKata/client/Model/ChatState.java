@@ -9,7 +9,7 @@ import java.util.Vector;
  * Time: 10:13
  */
 public class ChatState {
-    private static ChatState chatState = null;
+/*    private static ChatState chatState = null;
     private Vector<ChatMessage> messagesInChatSession;
     private String userName;
 
@@ -43,6 +43,6 @@ public class ChatState {
                 this.messagesInChatSession.add(chatMessage);
             }
         }
-    }
+    }             */
 
 }

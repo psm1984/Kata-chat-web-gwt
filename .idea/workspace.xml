@@ -1,28 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/ChatKata/client/View/LoginViewUiBinder.ui.xml" line="11" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b30974e7-234f-4c8c-86ae-9062b4166eca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ChatKata/client/ChatRoomUiBinder.ui.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ChatKata/client/LoginChatUiBinder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ChatKata/client/LoginChatUiBinder.ui.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/ChatKata/client/ChatKataModuleUiBinder.ui.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ChatKata/client/ChatKataModuleUiBinder.java" afterPath="$PROJECT_DIR$/src/main/java/ChatKata/client/ChatRoomUiBinder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChatKata/client/ChatKataModule.java" afterPath="$PROJECT_DIR$/src/main/java/ChatKata/client/ChatKataModule.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ChatKata/client/controller/ComunicationService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ChatKata/client/Model/IChatMessage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ChatKata/client/Model/IResponse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ChatKata/client/Model/ResponseFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ChatKataID.iml" afterPath="$PROJECT_DIR$/ChatKataID.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/ChatKata/ChatKataWebApp.gwt.xml" afterPath="$PROJECT_DIR$/src/main/resources/ChatKata/ChatKataWebApp.gwt.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChatKata/client/ChatKataWebApp.java" afterPath="$PROJECT_DIR$/src/main/java/ChatKata/client/ChatKataWebApp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChatKata/client/Model/ChatMessage.java" afterPath="$PROJECT_DIR$/src/main/java/ChatKata/client/Model/ChatMessage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChatKata/client/Model/ChatState.java" afterPath="$PROJECT_DIR$/src/main/java/ChatKata/client/Model/ChatState.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChatKata/client/View/ChatViewUiBinder.java" afterPath="$PROJECT_DIR$/src/main/java/ChatKata/client/View/ChatViewUiBinder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChatKata/client/View/ChatViewUiBinder.ui.xml" afterPath="$PROJECT_DIR$/src/main/java/ChatKata/client/View/ChatViewUiBinder.ui.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ChatKata/client/Model/ServerComunicationModel.java" afterPath="$PROJECT_DIR$/src/main/java/ChatKata/client/Model/ServerComunicationModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ChatKataID.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/ChatKataModule.html" changelist="b30974e7-234f-4c8c-86ae-9062b4166eca" time="1386082236026" ignored="false" />
-    <file path="/ChatKataModule.java" changelist="b30974e7-234f-4c8c-86ae-9062b4166eca" time="1386090132072" ignored="false" />
-    <file path="/Dummy.txt" changelist="b30974e7-234f-4c8c-86ae-9062b4166eca" time="1386087195383" ignored="false" />
-    <file path="/Example.java" changelist="b30974e7-234f-4c8c-86ae-9062b4166eca" time="1386076520286" ignored="false" />
-    <file path="/web.xml" changelist="b30974e7-234f-4c8c-86ae-9062b4166eca" time="1386080889070" ignored="false" />
-    <file path="/pom.xml" changelist="b30974e7-234f-4c8c-86ae-9062b4166eca" time="1386080655088" ignored="false" />
-    <file path="/ChatKataModule.ui.xml" changelist="b30974e7-234f-4c8c-86ae-9062b4166eca" time="1386082391931" ignored="false" />
-    <file path="/fragment.java" changelist="b30974e7-234f-4c8c-86ae-9062b4166eca" time="1386090053111" ignored="false" />
-    <file path="/ChatKataModuleUiBinder.ui.xml" changelist="b30974e7-234f-4c8c-86ae-9062b4166eca" time="1386089540495" ignored="false" />
-    <file path="/ChatKataModuleUiBinder.java" changelist="b30974e7-234f-4c8c-86ae-9062b4166eca" time="1386089592573" ignored="false" />
-    <file path="/ChatRoomUiBinder.ui.xml" changelist="b30974e7-234f-4c8c-86ae-9062b4166eca" time="1386090613092" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +72,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -83,10 +82,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ChatKataModule.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/ChatKataModule.java">
+      <file leaf-file-name="ComunicationService.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/controller/ComunicationService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="374" selection-end="374" vertical-scroll-proportion="-7.8">
+            <state line="79" column="50" selection-start="2660" selection-end="2660" vertical-scroll-proportion="1.4391143" vertical-offset="405" max-vertical-offset="1500">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,64 +93,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginChatUiBinder.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/LoginChatUiBinder.java">
+      <file leaf-file-name="IResponse.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/Model/IResponse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="4" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0">
+            <state line="16" column="4" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1440#1583#0" expanded="true" />
-                <element signature="e#1572#1573#0" expanded="true" />
-                <element signature="e#1620#1825#0" expanded="true" />
-                <element signature="e#1814#1815#0" expanded="true" />
-                <element signature="e#1864#2135#0" expanded="true" />
-                <element signature="e#2124#2125#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChatRoomUiBinder.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/ChatRoomUiBinder.java">
+      <file leaf-file-name="IChatMessage.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/Model/IChatMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="0" selection-start="1042" selection-end="1042" vertical-scroll-proportion="0.7413793">
+            <state line="7" column="17" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginChatUiBinder.ui.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/LoginChatUiBinder.ui.xml">
+      <file leaf-file-name="ResponseFactory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/Model/ResponseFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="114" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChatRoomUiBinder.ui.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/ChatRoomUiBinder.ui.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="20" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="989" column="61" selection-start="52530" selection-end="52530" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChatKataModule.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ChatKataModule.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="15" column="0" selection-start="479" selection-end="479" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -191,6 +159,20 @@
         <option value="$PROJECT_DIR$/src/main/java/ChatKata/client/ChatKataModule.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChatKata/client/ChatRoomUiBinder.ui.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ChatKata/client/ChatRoomUiBinder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChatKata/client/ChatKataWebApp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChatKata/client/View/LoginViewUiBinder.ui.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/ChatKata/client/View/ChatViewUiBinder.ui.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/ChatKata/client/View/ChatViewUiBinder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChatKata/client/Model/ChatState.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChatKata/client/Model/Message.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChatKata/client/Model/MessageFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/ChatKata/ChatKataWebApp.gwt.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/ChatKata/client/Model/Response.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChatKata/client/Model/ChatMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChatKata/client/Model/IChatMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChatKata/client/Model/ResponseFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChatKata/client/Model/IResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ChatKata/client/controller/ComunicationService.java" />
       </list>
     </option>
   </component>
@@ -227,12 +209,44 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
+          <option name="myItemId" value="Dependencies" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$DependenciesNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="com.google.gwt:gwt-user:2.6.0-rc1" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$DependencyNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="GWT Maven Archetype" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
           <option name="myItemId" value="Plugins" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
           <option name="myItemId" value="war" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="GWT Maven Archetype" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Plugins" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
         </PATH_ELEMENT>
       </PATH>
       <PATH>
@@ -319,8 +333,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -339,7 +351,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ChatKataID" />
+              <option name="myItemId" value="Kata-chat-web-gwt" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -349,7 +361,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ChatKataID" />
+              <option name="myItemId" value="Kata-chat-web-gwt" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -375,7 +387,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ChatKataID" />
+              <option name="myItemId" value="Kata-chat-web-gwt" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -389,7 +401,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ChatKataID" />
+              <option name="myItemId" value="Kata-chat-web-gwt" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -411,7 +423,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ChatKataID" />
+              <option name="myItemId" value="Kata-chat-web-gwt" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -437,7 +449,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ChatKataID" />
+              <option name="myItemId" value="Kata-chat-web-gwt" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -463,41 +475,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ChatKataID" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChatKata" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resource Bundle 'Messages'" />
-              <option name="myItemType" value="com.intellij.lang.properties.projectView.ResourceBundleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChatKataID" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ChatKataID" />
+              <option name="myItemId" value="Kata-chat-web-gwt" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -527,7 +505,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ChatKataID" />
+              <option name="myItemId" value="Kata-chat-web-gwt" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -557,7 +535,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ChatKataID" />
+              <option name="myItemId" value="Kata-chat-web-gwt" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -587,16 +565,140 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ChatKataID" />
+              <option name="myItemId" value="Kata-chat-web-gwt" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChatKata" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChatKataID" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Kata-chat-web-gwt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChatKata" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Presenter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChatKataID" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Kata-chat-web-gwt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChatKata" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChatKataID" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Kata-chat-web-gwt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChatKata" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -604,7 +706,7 @@
     <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="settings.github" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -614,6 +716,9 @@
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -623,24 +728,25 @@
       <recent name="$PROJECT_DIR$/src/main/java/ChatKata/client" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="ChatKata.client.Model" />
       <recent name="ChatKata.client" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ChatKata.client" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GwtTestChatKataModule">
+  <component name="RunManager" selected="Remote.gwt run">
     <configuration default="false" name="GwtTestChatKataModule" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="ChatKataID" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="ChatKata.client" />
       <option name="MAIN_CLASS_NAME" value="ChatKata.client.GwtTestChatKataModule" />
-      <option name="METHOD_NAME" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -652,7 +758,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" />
@@ -680,25 +786,32 @@
       </MavenSettings>
       <method />
     </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -726,6 +839,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -762,8 +888,42 @@
       <patterns />
       <method />
     </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.GwtTestChatKataModule" />
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="false" name="gwt run" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="8000" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="8000" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Remote.gwt run" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.GwtTestChatKataModule" />
     </list>
     <recent_temporary>
       <list size="1">
@@ -812,102 +972,189 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39813858" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.088446654" sideWeight="0.6691569" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33976835" sideWeight="0.6691569" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25483692" sideWeight="0.6691569" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33084312" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22559294" sideWeight="0.6691569" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.327818" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885212" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USERS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="CHECK_NEW_TODO" value="true" />
     <option name="myTodoPanelSettings">
-      <value>
-        <are-packages-shown value="false" />
-        <are-modules-shown value="false" />
-        <flatten-packages value="false" />
-        <is-autoscroll-to-source value="false" />
-      </value>
+      <TodoPanelSettings />
     </option>
-    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
-    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
-    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
-    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
-    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
-    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
-    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
-    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
-    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
-    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
-    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
-    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
-    <option name="LIMIT_HISTORY" value="true" />
-    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
-    <option name="UPDATE_FILTER_SCOPE_NAME" />
-    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
-    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
-    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
-    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="UIBinder + Bootstrap" />
-    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
-    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
-    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
-    <option name="ACTIVE_VCS_NAME" />
-    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
-    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
-    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
-    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
-    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="Versión inicial del proyecto" />
     <MESSAGE value="UIBinder + Bootstrap" />
+    <option name="LAST_COMMIT_MESSAGE" value="UIBinder + Bootstrap" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/ChatKata/client/Messages_fr.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/controller/ComunicationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="58" column="49" selection-start="1860" selection-end="1860" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1380">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/View/ChatViewUiBinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="91" selection-start="1353" selection-end="1353" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="2100">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/View/LoginViewUiBinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="44" selection-start="3241" selection-end="3257" vertical-scroll-proportion="0.0" vertical-offset="1725" max-vertical-offset="1935">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/Presenter/LoginPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="31" selection-start="701" selection-end="716" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="780">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/View/ChatViewUiBinder.ui.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="33" selection-start="913" selection-end="913" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="405">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/controller/ComunicationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="20" selection-start="992" selection-end="992" vertical-scroll-proportion="0.0" vertical-offset="106" max-vertical-offset="765">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-user/2.6.0-rc1/gwt-user-2.6.0-rc1.jar!/com/google/gwt/http/client/Response.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="22" selection-start="178" selection-end="178" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="975" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="32" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/ChatKata/ChatKataWebApp.gwt.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="25" selection-start="1266" selection-end="1266" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="480">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/Model/ServerComunicationModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="78" selection-start="632" selection-end="661" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1815">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/View/LoginViewUiBinder.ui.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="72" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="795">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/ChatKataWebApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="18" selection-start="359" selection-end="359" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/View/LoginViewUiBinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="0" selection-start="1744" selection-end="1744" vertical-scroll-proportion="0.0" vertical-offset="960" max-vertical-offset="1935">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/Presenter/LoginPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="31" selection-start="701" selection-end="716" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="780">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/View/ChatViewUiBinder.ui.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/View/LoginViewUiBinder.ui.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="72" selection-start="1452" selection-end="1452" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="795">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="749" column="61" selection-start="39637" selection-end="39637" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="11325" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="989" column="61" selection-start="52530" selection-end="52530" vertical-scroll-proportion="0.0" vertical-offset="14835" max-vertical-offset="15630" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/ChatKata/client/Messages_fr.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
       <provider editor-type-id="ResourceBundle">
         <state />
@@ -915,119 +1162,195 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/GreetingService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="9" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="10" column="9" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="35" selection-start="2804" selection-end="2818" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ChatKataModule.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="20" selection-start="128" selection-end="128" vertical-scroll-proportion="-2.4489796">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/ChatKata/ChatKataModule.gwt.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/generated-sources/gwt/ChatKata/client/GreetingServiceAsync.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="17" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="32" selection-start="575" selection-end="575" vertical-scroll-proportion="0.0">
+        <state line="86" column="35" selection-start="2804" selection-end="2818" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/ChatKata/client/Messages.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
       <provider editor-type-id="ResourceBundle">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/generated-sources/gwt/ChatKata/client/Messages.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="17" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="989" column="61" selection-start="52530" selection-end="52530" vertical-scroll-proportion="0.0">
+        <state line="749" column="61" selection-start="39637" selection-end="39637" vertical-scroll-proportion="0.9395901" vertical-offset="10364" max-vertical-offset="11325" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/ChatKataWebApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="10" selection-start="398" selection-end="398" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ChatKataModule.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/Presenter/LoginPresenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="28" column="31" selection-start="701" selection-end="716" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/ChatKataModule.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="374" selection-end="374" vertical-scroll-proportion="-7.8">
+        <state line="15" column="0" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/View/ChatViewUiBinder.ui.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="33" selection-start="913" selection-end="913" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/View/LoginViewUiBinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="44" selection-start="3241" selection-end="3257" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1500">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/Model/ChatState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="2" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="810">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/View/ChatViewUiBinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="57" selection-start="1988" selection-end="1988" vertical-scroll-proportion="0.0" vertical-offset="437" max-vertical-offset="1635">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/Model/ServerComunicationModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="78" selection-start="632" selection-end="661" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1815">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/ChatKata/ChatKataWebApp.gwt.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="37" selection-start="875" selection-end="939" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-servlet/2.6.0-rc1/gwt-servlet-2.6.0-rc1.jar!/com/google/gwt/xhr/client/XMLHttpRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1125" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-servlet/2.6.0-rc1/gwt-servlet-2.6.0-rc1.jar!/com/google/gwt/http/client/ResponseImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="28" selection-start="803" selection-end="803" vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="435" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-servlet/2.6.0-rc1/gwt-servlet-2.6.0-rc1.jar!/com/google/gwt/core/client/impl/Impl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="36" selection-start="2897" selection-end="2897" vertical-scroll-proportion="-8.52" vertical-offset="762" max-vertical-offset="1260" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/View/LoginViewUiBinder.ui.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="72" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-servlet/2.6.0-rc1/gwt-servlet-2.6.0-rc1.jar!/com/google/web/bindery/autobean/vm/impl/JsonSplittable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="61" selection-start="2261" selection-end="2261" vertical-scroll-proportion="0.27886322" vertical-offset="593" max-vertical-offset="1395" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/json/json/20090211/json-20090211.jar!/org/json/JSONObject.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="11" selection-start="440" selection-end="440" vertical-scroll-proportion="0.27886322" vertical-offset="38" max-vertical-offset="2280" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/json/json/20090211/json-20090211.jar!/org/json/JSONArray.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="11" selection-start="268" selection-end="268" vertical-scroll-proportion="0.25641027" vertical-offset="0" max-vertical-offset="1695" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/json/json/20090211/json-20090211.jar!/org/json/JSONTokener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="56" selection-start="1448" selection-end="1448" vertical-scroll-proportion="0.71794873" vertical-offset="135" max-vertical-offset="720" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/Model/ChatMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="25" selection-start="1062" selection-end="1062" vertical-scroll-proportion="0.0" vertical-offset="202" max-vertical-offset="870">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#899#900#0" expanded="true" />
+            <element signature="e#937#938#0" expanded="true" />
+            <element signature="e#1035#1036#0" expanded="true" />
+            <element signature="e#1068#1069#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-servlet/2.6.0-rc1/gwt-servlet-2.6.0-rc1.jar!/com/google/web/bindery/autobean/shared/impl/StringQuoter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="68" selection-start="1378" selection-end="1378" vertical-scroll-proportion="0.74861366" vertical-offset="0" max-vertical-offset="541" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-servlet/2.6.0-rc1/gwt-servlet-2.6.0-rc1.jar!/com/google/web/bindery/autobean/shared/AutoBeanCodex.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="46" selection-start="1052" selection-end="1052" vertical-scroll-proportion="0.39964476" vertical-offset="0" max-vertical-offset="563" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-user/2.6.0-rc1/gwt-user-2.6.0-rc1.jar!/com/google/gwt/http/client/Response.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="22" selection-start="178" selection-end="178" vertical-scroll-proportion="0.14150943" vertical-offset="0" max-vertical-offset="960">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/Model/IChatMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="17" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/Model/IResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="4" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/LoginChatUiBinder.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/Model/ResponseFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="4" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0">
+        <state line="15" column="0" selection-start="479" selection-end="479" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1440#1583#0" expanded="true" />
-            <element signature="e#1572#1573#0" expanded="true" />
-            <element signature="e#1620#1825#0" expanded="true" />
-            <element signature="e#1814#1815#0" expanded="true" />
-            <element signature="e#1864#2135#0" expanded="true" />
-            <element signature="e#2124#2125#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/LoginChatUiBinder.ui.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/controller/ComunicationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="114" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/ChatRoomUiBinder.ui.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="20" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ChatKata/client/ChatRoomUiBinder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="1042" selection-end="1042" vertical-scroll-proportion="0.7413793">
-          <folding />
+        <state line="79" column="50" selection-start="2660" selection-end="2660" vertical-scroll-proportion="1.4391143" vertical-offset="405" max-vertical-offset="1500">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

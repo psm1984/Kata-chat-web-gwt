@@ -3,6 +3,7 @@ package ChatKata.client.View;
 
 import ChatKata.client.Model.ChatMessage;
 import ChatKata.client.Presenter.IChatPresenter;
+import ChatKata.client.controller.ComunicationService;
 import com.github.gwtbootstrap.client.ui.*;
 import com.github.gwtbootstrap.client.ui.constants.ButtonType;
 import com.github.gwtbootstrap.client.ui.constants.IconType;
@@ -39,7 +40,7 @@ public class ChatViewUiBinder extends Composite implements IChatView {
     DataGrid<ChatMessage> exampleDataGrid;
 
     ListDataProvider<ChatMessage> dataProvider = new ListDataProvider<ChatMessage>();
-
+    ComunicationService comunicationService = new ComunicationService("http://localhost:8080");
     private String username;
     private IChatPresenter chatPresenter;
 
@@ -62,6 +63,7 @@ public class ChatViewUiBinder extends Composite implements IChatView {
         dataProvider.addDataDisplay(exampleDataGrid);
         exampleDataGrid.setEmptyTableWidget(new Label("Please add data."));
 
+
         ButtonCell buttonCell = new ButtonCell(IconType.REMOVE, ButtonType.DANGER);
         final TooltipCellDecorator<String> decorator = new TooltipCellDecorator<String>(buttonCell);
         decorator.setText("delete row, if click");
@@ -75,6 +77,7 @@ public class ChatViewUiBinder extends Composite implements IChatView {
             }
         };
 
+
         TextColumn<ChatMessage> messageColum = new TextColumn<ChatMessage>() {
 
             @Override
@@ -83,10 +86,10 @@ public class ChatViewUiBinder extends Composite implements IChatView {
             }
         };
         exampleDataGrid.setPageSize(500);
-
-
         exampleDataGrid.addColumn(nickColum);
         exampleDataGrid.addColumn(messageColum);
+        exampleDataGrid.setColumnWidth(0, "10%");
+        exampleDataGrid.setBordered(false);
 
 
     }
@@ -101,8 +104,10 @@ public class ChatViewUiBinder extends Composite implements IChatView {
 
         sendButton.addClickHandler(new ClickHandler() {
             public void onClick(ClickEvent event) {
+                comunicationService.GET();
                 changeInputState(false);
                 chatPresenter.sendMessage(messageToSend.getText());
+
             }
         });
     }
