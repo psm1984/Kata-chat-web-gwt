@@ -9,4 +9,5 @@ import com.gwtplatform.mvp.client.UiHandlers;
  * Time: 9:24
  */
 public interface ChatViewUiBinderHandlers extends UiHandlers {
+    void sendMessage(String name);
 }

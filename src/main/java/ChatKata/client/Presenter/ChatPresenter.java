@@ -27,6 +27,7 @@ public class ChatPresenter extends Presenter<ChatPresenter.MyView, ChatPresenter
     private final String userName;
     private final MyView view;
 
+
     @ProxyStandard
     @NameToken(nameToken)
     public interface MyProxy extends ProxyPlace<ChatPresenter>, Place {
@@ -34,6 +35,10 @@ public class ChatPresenter extends Presenter<ChatPresenter.MyView, ChatPresenter
 
     public interface MyView extends View, HasUiHandlers<ChatViewUiBinderHandlers> {
         void setUsername(String userName);
+
+        void messageSendedOK();
+
+        void messageSendedError();
     }
 
     @Inject
@@ -51,5 +56,12 @@ public class ChatPresenter extends Presenter<ChatPresenter.MyView, ChatPresenter
     protected void revealInParent() {
         RevealRootContentEvent.fire(this, this);
     }
+
+
+    public void sendMessage(String name) {
+        view.messageSendedOK();
+        view.messageSendedError();
+    }
+
 
 }

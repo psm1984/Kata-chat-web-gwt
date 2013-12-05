@@ -6,8 +6,10 @@ import ChatKata.client.Presenter.ChatPresenter;
 import com.github.gwtbootstrap.client.ui.*;
 import com.github.gwtbootstrap.client.ui.constants.ButtonType;
 import com.github.gwtbootstrap.client.ui.constants.IconType;
+import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.cellview.client.TextColumn;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.view.client.ListDataProvider;
@@ -92,10 +94,10 @@ public class ChatView extends ViewWithUiHandlers<ChatViewUiBinderHandlers> imple
 
     }
 
-    //
-
-    public void setUsername(String userName) {
-        welcomeMessage.setText("Welcome <i>" + userName + "</i>!");
+    @UiHandler("sendButton")
+    void onGlobalClicked(ClickEvent event) {
+        ChatViewUiBinderHandlers handler = getUiHandlers();
+        if (handler != null) handler.sendMessage(messageToSend.getName());
     }
 
     private void changeInputState(boolean state) {
@@ -106,12 +108,18 @@ public class ChatView extends ViewWithUiHandlers<ChatViewUiBinderHandlers> imple
     public void messageSendedOK() {
         messageToSend.setText("");
         changeInputState(true);
-
     }
 
     public void messageSendedError() {
         changeInputState(true);
     }
+
+    //
+
+    public void setUsername(String userName) {
+        welcomeMessage.setText("Welcome <i>" + userName + "</i>!");
+    }
+
 
     public void updateMessages() {
     }

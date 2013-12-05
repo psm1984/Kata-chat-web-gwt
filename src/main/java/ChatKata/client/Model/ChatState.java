@@ -9,6 +9,23 @@ import java.util.Vector;
  * Time: 10:13
  */
 public class ChatState {
+    private Vector<ChatMessage> messagesInChatSession;
+    private static ChatState chatState = null;
+
+    private ChatState() {
+        messagesInChatSession = new Vector<ChatMessage>();
+    }
+
+    public static ChatState getChatState() {
+        if (chatState == null) chatState = new ChatState();
+        return chatState;
+    }
+
+    public Vector<ChatMessage> getMessages() {
+        return messagesInChatSession;
+    }
+
+
 /*    private static ChatState chatState = null;
     private Vector<ChatMessage> messagesInChatSession;
     private String userName;
