@@ -2,21 +2,18 @@ package ChatKata.client.View;
 
 
 import ChatKata.client.Model.ChatMessage;
-import ChatKata.client.Presenter.IChatPresenter;
-import ChatKata.client.controller.ComunicationService;
+import ChatKata.client.Presenter.ChatPresenter;
 import com.github.gwtbootstrap.client.ui.*;
 import com.github.gwtbootstrap.client.ui.constants.ButtonType;
 import com.github.gwtbootstrap.client.ui.constants.IconType;
-import com.google.gwt.core.client.GWT;
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.cellview.client.TextColumn;
-import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.HTMLPanel;
+import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.view.client.ListDataProvider;
+import com.gwtplatform.mvp.client.ViewWithUiHandlers;
 
+import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,47 +25,50 @@ import java.util.List;
  */
 
 
-public class ChatViewUiBinder extends Composite implements IChatView {
+public class ChatView extends ViewWithUiHandlers<ChatViewUiBinderHandlers> implements ChatPresenter.MyView {
     @UiField
     Heading welcomeMessage;
     @UiField
     TextBox messageToSend;
     @UiField
     Button sendButton;
-
+    @UiField
+    Collapse loginPanelCollapse;
     @UiField
     DataGrid<ChatMessage> exampleDataGrid;
-
-    ListDataProvider<ChatMessage> dataProvider = new ListDataProvider<ChatMessage>();
-    ComunicationService comunicationService = new ComunicationService("http://localhost:8080");
     private String username;
-    private IChatPresenter chatPresenter;
+    private ListDataProvider<ChatMessage> dataProvider = new ListDataProvider<ChatMessage>();
+    private final Widget widget;
 
 
-    interface ExampleUiBinderUiBinder extends UiBinder<HTMLPanel, ChatViewUiBinder> {
+    public interface Binder extends UiBinder<Widget, ChatView> {
     }
 
-    private static ExampleUiBinderUiBinder ourUiBinder = GWT.create(ExampleUiBinderUiBinder.class);
+    public Widget asWidget() {
+        return widget;
+    }
 
-    public ChatViewUiBinder(String username) {
+    @Inject
+    public ChatView(Binder uiBinder) {
+        widget = uiBinder.createAndBindUi(this);
+        configureDataList();
+    }
 
+    public void collapseToggle() {
+        loginPanelCollapse.toggle();
+    }
+
+    private void configureDataList() {
+        String username = "test";
         this.username = username;
-        initWidget(ourUiBinder.createAndBindUi(this));
-        welcomeMessage.setText("Welcome <i>" + username + "</i>!");
-        configureListeners();
+
         List<ChatMessage> listMessages = new ArrayList<ChatMessage>();
         for (int i = 0; i < 20; i++) listMessages.add(new ChatMessage("Nick " + i, "Message " + i));
         dataProvider.setList(listMessages);
-
         dataProvider.addDataDisplay(exampleDataGrid);
         exampleDataGrid.setEmptyTableWidget(new Label("Please add data."));
-
-
         ButtonCell buttonCell = new ButtonCell(IconType.REMOVE, ButtonType.DANGER);
         final TooltipCellDecorator<String> decorator = new TooltipCellDecorator<String>(buttonCell);
-        decorator.setText("delete row, if click");
-
-
         TextColumn<ChatMessage> nickColum = new TextColumn<ChatMessage>() {
 
             @Override
@@ -76,8 +76,6 @@ public class ChatViewUiBinder extends Composite implements IChatView {
                 return object.nick;
             }
         };
-
-
         TextColumn<ChatMessage> messageColum = new TextColumn<ChatMessage>() {
 
             @Override
@@ -94,24 +92,11 @@ public class ChatViewUiBinder extends Composite implements IChatView {
 
     }
 
-    private void configureListeners() {
-/*        messageToSend.addKeyUpHandler(new KeyUpHandler() {
-            public void onKeyUp(KeyUpEvent keyUpEvent) {
-                loginPresenter.isValidUsername(username.getText());
-            }
-        });*/
+    //
 
-
-        sendButton.addClickHandler(new ClickHandler() {
-            public void onClick(ClickEvent event) {
-                comunicationService.GET();
-                changeInputState(false);
-                chatPresenter.sendMessage(messageToSend.getText());
-
-            }
-        });
+    public void setUsername(String userName) {
+        welcomeMessage.setText("Welcome <i>" + userName + "</i>!");
     }
-
 
     private void changeInputState(boolean state) {
         sendButton.setEnabled(state);
@@ -129,7 +114,6 @@ public class ChatViewUiBinder extends Composite implements IChatView {
     }
 
     public void updateMessages() {
-
     }
 
 }

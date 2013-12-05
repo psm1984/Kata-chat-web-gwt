@@ -12,11 +12,22 @@
       <excludeFolder url="file://$MODULE_DIR$/target/.generated" />
       <excludeFolder url="file://$MODULE_DIR$/target/ChatKataID-1.0-SNAPSHOT" />
       <excludeFolder url="file://$MODULE_DIR$/target/gwt-unitCache" />
+      <excludeFolder url="file://$MODULE_DIR$/target/test-classes" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: com.github.gwtbootstrap:gwt-bootstrap:2.2.1.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.gwtplatform:gwtp-mvp-client:0.6" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.gwtplatform:gwtp-clients-common:0.6" level="project" />
+    <orderEntry type="library" name="Maven: com.google.inject:guice:3.0" level="project" />
+    <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />
+    <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.gwtplatform:gwtp-dispatch-client:0.6" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.gwtplatform:gwtp-dispatch-shared:0.6" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.gwtplatform:gwtp-tester:0.6" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.gwtplatform:gwtp-dispatch-server:0.6" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.google.gwt:gwt-servlet:2.6.0-rc1" level="project" />
+    <orderEntry type="library" name="Maven: com.google.gwt.inject:gin:1.5.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.inject.extensions:guice-assistedinject:3.0-rc2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.google.gwt:gwt-user:2.6.0-rc1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: javax.validation:validation-api:1.0.0.GA" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: javax.validation:validation-api:sources:1.0.0.GA" level="project" />

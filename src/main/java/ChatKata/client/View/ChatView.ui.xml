@@ -1,0 +1,30 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+
+    <g:HTMLPanel>
+        <b:Container>
+            <b:Navbar>
+                <b:Brand>Chat Kata</b:Brand>
+            </b:Navbar>
+
+            <b:Collapse ui:field="loginPanelCollapse" defaultOpen="true">
+                <b:Container>
+                    <b:Hero ui:field="chatPanel">
+                        <b:Heading ui:field="welcomeMessage" size="2"></b:Heading>
+
+                        <b:DataGrid ui:field="exampleDataGrid"
+                                    bordered="true" condensed="false" striped="true"
+                                    height="300px" width="100%"/>
+                        <b:WellForm type="INLINE">
+                            <b:TextBox ui:field="messageToSend" alternateSize="LARGE" placeholder="Message"
+                                       width="81%"/>
+                            <b:Button ui:field="sendButton" addStyleNames="btn" width="15%">Send message</b:Button>
+                        </b:WellForm>
+                    </b:Hero>
+                </b:Container>
+            </b:Collapse>
+        </b:Container>
+    </g:HTMLPanel>
+</ui:UiBinder>
+

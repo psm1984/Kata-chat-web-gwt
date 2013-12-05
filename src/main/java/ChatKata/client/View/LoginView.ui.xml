@@ -8,7 +8,7 @@
             </b:Navbar>
 
             <b:Collapse ui:field="loginPanelCollapse" defaultOpen="true">
-                <b:Container>
+            <b:Container>
                     <b:Hero ui:field="loginPanel">
                         <b:Heading size="1">Login</b:Heading>
                         <b:Form type="HORIZONTAL">

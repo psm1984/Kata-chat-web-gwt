@@ -1,10 +1,9 @@
 package ChatKata.client;
 
 
-import ChatKata.client.View.ChatViewUiBinder;
-import ChatKata.client.View.LoginViewUiBinder;
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.core.client.GWT;
+import com.gwtplatform.mvp.client.DelayedBindRegistry;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,11 +12,11 @@ import com.google.gwt.user.client.ui.RootPanel;
  * Time: 9:49
  */
 public class ChatKataWebApp implements EntryPoint {
+    public final MyGinjector ginjector = GWT.create(MyGinjector.class);
 
     public void onModuleLoad() {
-        LoginViewUiBinder ourUiBinder = new LoginViewUiBinder();
-        //ChatViewUiBinder ourUiBinder = new ChatViewUiBinder("User2");
-        RootPanel.get().add(ourUiBinder);
+        DelayedBindRegistry.bind(ginjector);
+        ginjector.getPlaceManager().revealCurrentPlace();
     }
 
 }

@@ -1,7 +1,15 @@
 package ChatKata.client.Presenter;
 
-import ChatKata.client.View.ILoginView;
-import ChatKata.client.View.LoginViewUiBinder;
+import ChatKata.client.View.LoginViewUiBinderHandlers;
+import com.google.gwt.event.shared.EventBus;
+import com.gwtplatform.mvp.client.HasUiHandlers;
+import com.gwtplatform.mvp.client.Presenter;
+import com.gwtplatform.mvp.client.View;
+import com.gwtplatform.mvp.client.annotations.NameToken;
+import com.gwtplatform.mvp.client.annotations.ProxyStandard;
+import com.gwtplatform.mvp.client.proxy.*;
+
+import javax.inject.Inject;
 
 /**
  * Created with IntelliJ IDEA.
@@ -9,11 +17,38 @@ import ChatKata.client.View.LoginViewUiBinder;
  * Date: 4/12/13
  * Time: 10:17
  */
-public class LoginPresenter implements ILoginPresenter {
-    private ILoginView loginView;
 
-    public LoginPresenter(LoginViewUiBinder loginViewUiBinder) {
-        loginView = loginViewUiBinder;
+public class LoginPresenter extends Presenter<LoginPresenter.MyView, LoginPresenter.MyProxy>
+        implements LoginViewUiBinderHandlers {
+    public static final String nameToken = "main";
+    private final PlaceManager placeManager;
+    private MyView view;
+
+    @ProxyStandard
+    @NameToken(nameToken)
+    public interface MyProxy extends ProxyPlace<LoginPresenter>, Place {
+    }
+
+    public interface MyView extends View, HasUiHandlers<LoginViewUiBinderHandlers> {
+        void errorLoginPassword();
+
+        void usernameValidated(boolean state);
+
+        void passwordValidated(boolean state);
+    }
+
+    @Inject
+    public LoginPresenter(EventBus eventBus, MyView view, MyProxy proxy,
+                          PlaceManager placeManager) {
+        super(eventBus, view, proxy);
+        this.view = view;
+        view.setUiHandlers(this);
+        this.placeManager = placeManager;
+    }
+
+    @Override
+    protected void revealInParent() {
+        RevealRootContentEvent.fire(this, this);
     }
 
     private boolean validUsername(String username) {
@@ -27,20 +62,20 @@ public class LoginPresenter implements ILoginPresenter {
     }
 
     public void isValidUsername(String username) {
-        loginView.usernameValidated(validUsername(username));
+        view.usernameValidated(validUsername(username));
     }
 
     public void isValidPassword(String password) {
-        loginView.passwordValidated(validPassword(password));
+        view.passwordValidated(validPassword(password));
     }
 
     public void doLogin(String username, String password) {
         if (validUsername(username) &&
-                validPassword(password)) loginView.navigateToChatWhitUsername(username);
-        else loginView.errorLoginPassword();
+                validPassword(password)) {
+            PlaceRequest myRequest = new PlaceRequest("chat");
+            myRequest = myRequest.with("loginName", username);
+            placeManager.revealPlace(myRequest, false);
+        } else getView().errorLoginPassword();
     }
 
-    public void setView(ILoginView loginView) {
-
-    }
 }
