@@ -2,6 +2,7 @@ package ChatKata.client.View;
 
 
 import ChatKata.client.Model.ChatMessage;
+import ChatKata.client.Model.ChatState;
 import ChatKata.client.Presenter.ChatPresenter;
 import com.github.gwtbootstrap.client.ui.*;
 import com.github.gwtbootstrap.client.ui.constants.ButtonType;
@@ -16,7 +17,6 @@ import com.google.gwt.view.client.ListDataProvider;
 import com.gwtplatform.mvp.client.ViewWithUiHandlers;
 
 import javax.inject.Inject;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -64,7 +64,7 @@ public class ChatView extends ViewWithUiHandlers<ChatViewUiBinderHandlers> imple
         String username = "test";
         this.username = username;
 
-        List<ChatMessage> listMessages = new ArrayList<ChatMessage>();
+        List<ChatMessage> listMessages = ChatState.getChatState().getMessages();
         for (int i = 0; i < 20; i++) listMessages.add(new ChatMessage("Nick " + i, "Message " + i));
         dataProvider.setList(listMessages);
         dataProvider.addDataDisplay(exampleDataGrid);
@@ -90,14 +90,13 @@ public class ChatView extends ViewWithUiHandlers<ChatViewUiBinderHandlers> imple
         exampleDataGrid.addColumn(messageColum);
         exampleDataGrid.setColumnWidth(0, "10%");
         exampleDataGrid.setBordered(false);
-
-
     }
 
     @UiHandler("sendButton")
     void onGlobalClicked(ClickEvent event) {
+
         ChatViewUiBinderHandlers handler = getUiHandlers();
-        if (handler != null) handler.sendMessage(messageToSend.getName());
+        if (handler != null) handler.sendMessage(messageToSend.getText());
     }
 
     private void changeInputState(boolean state) {
@@ -112,6 +111,10 @@ public class ChatView extends ViewWithUiHandlers<ChatViewUiBinderHandlers> imple
 
     public void messageSendedError() {
         changeInputState(true);
+    }
+
+    public void refreshMessages() {
+        dataProvider.refresh();
     }
 
     //

@@ -1,5 +1,7 @@
 package ChatKata.client.Presenter;
 
+import ChatKata.client.Model.ChatMessage;
+import ChatKata.client.Model.ChatState;
 import ChatKata.client.View.ChatViewUiBinderHandlers;
 import com.google.gwt.event.shared.EventBus;
 import com.gwtplatform.mvp.client.HasUiHandlers;
@@ -35,10 +37,10 @@ public class ChatPresenter extends Presenter<ChatPresenter.MyView, ChatPresenter
 
     public interface MyView extends View, HasUiHandlers<ChatViewUiBinderHandlers> {
         void setUsername(String userName);
-
         void messageSendedOK();
-
         void messageSendedError();
+
+        void refreshMessages();
     }
 
     @Inject
@@ -58,7 +60,9 @@ public class ChatPresenter extends Presenter<ChatPresenter.MyView, ChatPresenter
     }
 
 
-    public void sendMessage(String name) {
+    public void sendMessage(String message) {
+        ChatState.getChatState().getMessages().add(new ChatMessage(userName, message));
+        view.refreshMessages();
         view.messageSendedOK();
         view.messageSendedError();
     }
