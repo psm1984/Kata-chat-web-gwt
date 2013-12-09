@@ -6,8 +6,6 @@ import com.github.gwtbootstrap.client.ui.constants.IconType;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.KeyUpEvent;
-import com.google.gwt.resources.client.ClientBundle;
-import com.google.gwt.resources.client.ImageResource;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
@@ -24,41 +22,38 @@ import com.google.gwt.user.client.ui.HTMLPanel;
  */
 public class LoginView extends Composite implements LoginPresenter.MyView {
     @UiField
-    Hero loginPanel;
+    protected Hero loginPanel;
     @UiField
-    TextBox username;
+    protected TextBox username;
     @UiField
-    PasswordTextBox password;
+    protected PasswordTextBox password;
     @UiField
-    InputAddOn usernameCheck;
+    protected InputAddOn usernameCheck;
     @UiField
-    InputAddOn passwordCheck;
+    protected InputAddOn passwordCheck;
     @UiField
-    Button sendButton;
+    protected Button sendButton;
     @UiField
-    Collapse loginPanelCollapse;
-
+    protected Collapse loginPanelCollapse;
 
     private LoginViewUiBinderHandlers loginViewUiBinderHandlers;
     private boolean usernameValidState = false;
     private boolean passwordValidState = false;
 
-
-    interface UiBinderHTMLLoginView extends UiBinder<HTMLPanel, LoginView> {}
+    interface UiBinderHTMLLoginView extends UiBinder<HTMLPanel, LoginView> {
+    }
 
     private static UiBinderHTMLLoginView ourUiBinder = GWT.create(UiBinderHTMLLoginView.class);
-
-
 
     public LoginView() {
         initWidget(ourUiBinder.createAndBindUi(this));
         sendButton.setEnabled(false);
     }
 
-
     @UiHandler("sendButton")
     void onGlobalClicked(ClickEvent event) {
-        if (loginViewUiBinderHandlers != null) loginViewUiBinderHandlers.doLogin(username.getText(), password.getText());
+        if (loginViewUiBinderHandlers != null)
+            loginViewUiBinderHandlers.doLogin(username.getText(), password.getText());
     }
 
     @UiHandler("username")
@@ -73,10 +68,10 @@ public class LoginView extends Composite implements LoginPresenter.MyView {
 
 
     public void usernameValidated(boolean isValid) {
-        if (isValid){
+        if (isValid) {
             usernameCheck.setAppendIcon(IconType.CHECK);
             usernameValidState = true;
-        }else{
+        } else {
             usernameCheck.setAppendIcon(IconType.REMOVE);
             usernameValidState = false;
         }
@@ -84,10 +79,10 @@ public class LoginView extends Composite implements LoginPresenter.MyView {
     }
 
     public void passwordValidated(boolean isValid) {
-        if (isValid){
+        if (isValid) {
             passwordCheck.setAppendIcon(IconType.CHECK);
             passwordValidState = true;
-        }else{
+        } else {
             passwordCheck.setAppendIcon(IconType.REMOVE);
             passwordValidState = false;
         }

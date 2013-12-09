@@ -1,4 +1,4 @@
-package ChatKata.client;
+package ChatKata.client.resources.images;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.resources.client.ClientBundle;

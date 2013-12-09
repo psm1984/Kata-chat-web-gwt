@@ -1,6 +1,7 @@
 package ChatKata.client.view;
 
 
+import ChatKata.client.configuration.Constants;
 import ChatKata.client.model.ChatState;
 import ChatKata.client.model.IChatMessage;
 import ChatKata.client.presenter.ChatPresenter;
@@ -15,9 +16,9 @@ import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.cellview.client.TextColumn;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HTMLPanel;
-import com.google.gwt.user.client.Window;
 import com.google.gwt.view.client.ListDataProvider;
 
 import java.util.List;
@@ -32,18 +33,18 @@ import java.util.List;
 
 public class ChatView extends Composite implements ChatPresenter.MyView {
     @UiField
-    Heading welcomeMessage;
+    protected Heading welcomeMessage;
     @UiField
-    TextBox messageToSend;
+    protected TextBox messageToSend;
     @UiField
-    Button sendButton;
+    protected Button sendButton;
     @UiField
-    Collapse loginPanelCollapse;
+    protected Collapse loginPanelCollapse;
     @UiField
-    Icon serverStatusIcon;
+    protected Icon serverStatusIcon;
     @UiField
-    DataGrid<IChatMessage> chatMessagesDataGrid;
-    private String username;
+    protected DataGrid<IChatMessage> chatMessagesDataGrid;
+
     private ListDataProvider<IChatMessage> chatMessagesProvider = new ListDataProvider<IChatMessage>();
     private ChatViewUiBinderHandlers handler;
     interface UiBinderHTMLChatView extends UiBinder<HTMLPanel, ChatView> {}
@@ -56,15 +57,11 @@ public class ChatView extends Composite implements ChatPresenter.MyView {
         configureDataList();
     }
 
-    public void collapseToggle() {
-        loginPanelCollapse.toggle();
-    }
-
     private void configureDataList() {
         List<IChatMessage> listMessages = ChatState.getChatState().getMessages();
         chatMessagesProvider.setList(listMessages);
         chatMessagesProvider.addDataDisplay(chatMessagesDataGrid);
-        chatMessagesDataGrid.setEmptyTableWidget(new Label("Empty Chat Room."));
+        chatMessagesDataGrid.setEmptyTableWidget(new Label("Empty Chat Room"));
         ButtonCell buttonCell = new ButtonCell(IconType.REMOVE, ButtonType.DANGER);
 
         TextColumn<IChatMessage> usernameColumn = new TextColumn<IChatMessage>() {
@@ -81,7 +78,7 @@ public class ChatView extends Composite implements ChatPresenter.MyView {
             }
         };
 
-        chatMessagesDataGrid.setPageSize(500);
+        chatMessagesDataGrid.setPageSize(Constants.MAX_MESSAGES_IN_CHAT);
         chatMessagesDataGrid.addColumn(usernameColumn);
         chatMessagesDataGrid.addColumn(messageColumn);
         chatMessagesDataGrid.setColumnWidth(0, "10%");
@@ -91,7 +88,7 @@ public class ChatView extends Composite implements ChatPresenter.MyView {
 
     @UiHandler("sendButton")
     void onGlobalClicked(ClickEvent event) {
-        if (handler != null) sendMessage();
+        sendMessage();
     }
     @UiHandler("messageToSend")
     void onKeyUpUsername(KeyUpEvent keyUpEvent) {
@@ -111,6 +108,9 @@ public class ChatView extends Composite implements ChatPresenter.MyView {
 
     public void refreshMessages() {
         chatMessagesProvider.refresh();
+        //int totalRowCount = chatMessagesDataGrid.getRowCount();
+
+
     }
 
     public void showChatView() {
@@ -132,7 +132,10 @@ public class ChatView extends Composite implements ChatPresenter.MyView {
 
 
     private void sendMessage() {
-        handler.sendMessage(messageToSend.getText());
+        if (handler != null) {
+            changeInputState(false);
+            handler.sendMessage(messageToSend.getText());
+        }
     }
 
     private void changeInputState(boolean state) {

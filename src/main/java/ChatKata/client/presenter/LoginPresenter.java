@@ -13,24 +13,30 @@ public class LoginPresenter implements LoginViewUiBinderHandlers {
     private MyView view;
 
     private static LoginPresenter loginPresenter;
-    private LoginPresenter(){
+
+    private LoginPresenter() {
 
     }
-    public static LoginPresenter getLoginPresenter (){
-        if (loginPresenter==null) loginPresenter = new LoginPresenter();
+
+    public static LoginPresenter getLoginPresenter() {
+        if (loginPresenter == null) loginPresenter = new LoginPresenter();
         return loginPresenter;
     }
 
-    public void setIView(MyView view){
+    public void setIView(MyView view) {
         this.view = view;
         view.setUiHandlers(this);
     }
 
-    public interface MyView  {
+    public interface MyView {
         void setUiHandlers(LoginViewUiBinderHandlers loginPresenter);
+
         void errorLoginPassword(String errorMessage);
+
         void usernameValidated(boolean state);
+
         void passwordValidated(boolean state);
+
         void hideLoginView();
     }
 
@@ -43,12 +49,12 @@ public class LoginPresenter implements LoginViewUiBinderHandlers {
     }
 
     public void doLogin(String username, String password) {
-        if (validUsername(username) &&  validPassword(password))
+        if (validUsername(username) && validPassword(password))
             navigateToChatPresenter(username);
         else view.errorLoginPassword("Error: Wrong password or username");
     }
 
-    private void navigateToChatPresenter(String username){
+    private void navigateToChatPresenter(String username) {
         view.hideLoginView();
         ChatPresenter chatPresenter = ChatPresenter.getChatPresenter();
         chatPresenter.setUsername(username);
@@ -56,13 +62,11 @@ public class LoginPresenter implements LoginViewUiBinderHandlers {
     }
 
     private boolean validUsername(String username) {
-        if (username.length() > 0) return true;
-        else return false;
+        return username.length() > 0;
     }
 
     private boolean validPassword(String password) {
-        if (password.length() > 0) return true;
-        else return false;
+        return password.length() > 0;
     }
 
 }

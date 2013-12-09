@@ -11,17 +11,27 @@
 
                         <b:DataGrid ui:field="chatMessagesDataGrid"
                                     bordered="true" condensed="false" striped="true"
-                                    height="300px" width="100%"/>
+                                    height="300px" width="100%"
+                                />
                         <b:WellForm type="INLINE">
-                            <b:TextBox ui:field="messageToSend" alternateSize="LARGE" placeholder="Message"
+                            <b:TextBox ui:field="messageToSend" alternateSize="LARGE"
+                                       placeholder="Message"
                                        width="81%"/>
                             <b:Button ui:field="sendButton" addStyleNames="btn" width="15%" icon="CLOUD_UPLOAD" iconSize="LARGE">Send message</b:Button>
                         </b:WellForm>
-                        <b:Label>
-                        Server Status
-                    </b:Label>
-                        <b:Icon ui:field="serverStatusIcon" type="WARNING_SIGN"></b:Icon>
+
+
                     </b:Hero>
+
+                    <b:Navbar>
+                        <b:Nav alignment="RIGHT">
+                            <b:Label>
+                                Server Status
+                            </b:Label>
+                            <b:Icon ui:field="serverStatusIcon" type="WARNING_SIGN"></b:Icon>
+                        </b:Nav>
+                    </b:Navbar>
+
                 </b:Container>
             </b:Collapse>
         </b:Container>

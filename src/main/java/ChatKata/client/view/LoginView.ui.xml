@@ -1,29 +1,34 @@
 <ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
              xmlns:g='urn:import:com.google.gwt.user.client.ui'
              xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
-    <ui:with field="res" type="ChatKata.client.Resources"/>
+    <ui:with field="res" type="ChatKata.client.resources.images.Resources"/>
 
     <g:HTMLPanel>
         <b:Container>
+
             <b:Navbar>
                 <b:Brand>Chat Kata</b:Brand>
-                <b:Image resource="{res.logo}"></b:Image>
+                <b:Nav alignment="RIGHT">
+                    <b:Image resource="{res.logo}"></b:Image>
+                </b:Nav>
             </b:Navbar>
 
 
             <b:Collapse ui:field="loginPanelCollapse" defaultOpen="true">
-            <b:Container>
+                <b:Container>
                     <b:Hero ui:field="loginPanel">
-                        <b:Heading size="1">Login</b:Heading>
-                        <b:Form type="HORIZONTAL">
-                            <b:Pagination alignment="centered">
+                        <b:Pagination alignment="centered">
+                            <b:Heading size="1">Login</b:Heading>
+                            <b:Legend>to BQReaders Chat</b:Legend>
+                            <b:Form type="HORIZONTAL">
                                 <b:Fieldset>
                                     <b:ControlGroup>
                                         <b:ControlLabel width="20%">Username</b:ControlLabel>
                                         <b:Controls>
 
                                             <b:InputAddOn ui:field="usernameCheck" appendIcon="REMOVE">
-                                                <b:TextBox width="80%" ui:field="username" alternateSize="SMALL" placeholder="Username"/>
+                                                <b:TextBox width="80%" ui:field="username" alternateSize="SMALL"
+                                                           placeholder="Username"/>
                                             </b:InputAddOn>
 
                                         </b:Controls>
@@ -35,12 +40,16 @@
                                             </b:InputAddOn>
                                         </b:Controls>
 
-                                        <b:Button ui:field="sendButton" addStyleNames="btn" icon="LOCK" block="true" iconSize="LARGE">Log in</b:Button>
+                                        <b:Button ui:field="sendButton" addStyleNames="btn" icon="LOCK" block="true"
+                                                  iconSize="LARGE">Log in
+                                        </b:Button>
                                     </b:ControlGroup>
                                 </b:Fieldset>
-                            </b:Pagination>
-                        </b:Form>
+                            </b:Form>
+
+                        </b:Pagination>
                     </b:Hero>
+
                 </b:Container>
 
             </b:Collapse>

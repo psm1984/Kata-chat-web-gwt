@@ -49,8 +49,7 @@ public class CommunicationService {
         IMessageFactory messageFactory = GWT.create(IMessageFactory.class);
         IChatMessage message = new ChatMessage(nick, messageText);
         AutoBean<IChatMessage> messageAutoBean = messageFactory.create(IChatMessage.class, message);
-        String json = AutoBeanCodex.encode(messageAutoBean).getPayload();
-        return json;
+        return AutoBeanCodex.encode(messageAutoBean).getPayload();
     }
 
     public void POST(final ICommunicationServiceResponse responseHandler, String path, String nick, String message) {
