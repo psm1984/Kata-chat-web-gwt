@@ -1,11 +1,11 @@
 package ChatKata.client.controller;
 
-import ChatKata.client.Model.IResponse;
+import ChatKata.client.model.IResponse;
 
 /**
  * Created by frutos on 5/12/13.
  */
-public interface IComunicationServiceResponse {
+public interface ICommunicationServiceResponse {
     void GETFail();
     void GETSuccessful(IResponse response);
     void POSTFail();

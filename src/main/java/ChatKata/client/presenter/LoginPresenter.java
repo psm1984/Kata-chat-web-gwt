@@ -1,6 +1,6 @@
-package ChatKata.client.Presenter;
+package ChatKata.client.presenter;
 
-import ChatKata.client.View.LoginViewUiBinderHandlers;
+import ChatKata.client.view.LoginViewUiBinderHandlers;
 
 /**
  * Created with IntelliJ IDEA.
@@ -10,40 +10,28 @@ import ChatKata.client.View.LoginViewUiBinderHandlers;
  */
 
 public class LoginPresenter implements LoginViewUiBinderHandlers {
-    public static final String nameToken = "main";
     private MyView view;
 
     private static LoginPresenter loginPresenter;
+    private LoginPresenter(){
+
+    }
     public static LoginPresenter getLoginPresenter (){
         if (loginPresenter==null) loginPresenter = new LoginPresenter();
         return loginPresenter;
     }
+
     public void setIView(MyView view){
         this.view = view;
         view.setUiHandlers(this);
     }
 
-
     public interface MyView  {
         void setUiHandlers(LoginViewUiBinderHandlers loginPresenter);
-        void errorLoginPassword();
+        void errorLoginPassword(String errorMessage);
         void usernameValidated(boolean state);
         void passwordValidated(boolean state);
-        void tooggleCollapse();
-    }
-
-    private LoginPresenter() {}
-
-
-
-    private boolean validUsername(String username) {
-        if (username.length() > 0) return true;
-        else return false;
-    }
-
-    private boolean validPassword(String password) {
-        if (password.length() > 0) return true;
-        else return false;
+        void hideLoginView();
     }
 
     public void isValidUsername(String username) {
@@ -55,15 +43,26 @@ public class LoginPresenter implements LoginViewUiBinderHandlers {
     }
 
     public void doLogin(String username, String password) {
-        if (validUsername(username) &&
-                validPassword(password)) {
-            view.tooggleCollapse();
-            ChatPresenter chatPresenter = ChatPresenter.getChatPresenter();
-            chatPresenter.setUserName(username);
-            chatPresenter.reveal();
+        if (validUsername(username) &&  validPassword(password))
+            navigateToChatPresenter(username);
+        else view.errorLoginPassword("Error: Wrong password or username");
+    }
 
+    private void navigateToChatPresenter(String username){
+        view.hideLoginView();
+        ChatPresenter chatPresenter = ChatPresenter.getChatPresenter();
+        chatPresenter.setUsername(username);
+        chatPresenter.reveal();
+    }
 
-        } else view.errorLoginPassword();
+    private boolean validUsername(String username) {
+        if (username.length() > 0) return true;
+        else return false;
+    }
+
+    private boolean validPassword(String password) {
+        if (password.length() > 0) return true;
+        else return false;
     }
 
 }

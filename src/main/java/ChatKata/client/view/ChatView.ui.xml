@@ -1,22 +1,26 @@
 <ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
              xmlns:g='urn:import:com.google.gwt.user.client.ui'
              xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
-
     <g:HTMLPanel>
         <b:Container>
             <b:Collapse ui:field="loginPanelCollapse" defaultOpen="false">
                 <b:Container>
+
                     <b:Hero ui:field="chatPanel">
                         <b:Heading ui:field="welcomeMessage" size="2"></b:Heading>
 
-                        <b:DataGrid ui:field="messageDataGrid"
+                        <b:DataGrid ui:field="chatMessagesDataGrid"
                                     bordered="true" condensed="false" striped="true"
                                     height="300px" width="100%"/>
                         <b:WellForm type="INLINE">
                             <b:TextBox ui:field="messageToSend" alternateSize="LARGE" placeholder="Message"
                                        width="81%"/>
-                            <b:Button ui:field="sendButton" addStyleNames="btn" width="15%">Send message</b:Button>
+                            <b:Button ui:field="sendButton" addStyleNames="btn" width="15%" icon="CLOUD_UPLOAD" iconSize="LARGE">Send message</b:Button>
                         </b:WellForm>
+                        <b:Label>
+                        Server Status
+                    </b:Label>
+                        <b:Icon ui:field="serverStatusIcon" type="WARNING_SIGN"></b:Icon>
                     </b:Hero>
                 </b:Container>
             </b:Collapse>

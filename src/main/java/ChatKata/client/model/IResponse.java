@@ -1,4 +1,4 @@
-package ChatKata.client.Model;
+package ChatKata.client.model;
 
 import com.google.web.bindery.autobean.shared.AutoBean;
 

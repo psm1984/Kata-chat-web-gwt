@@ -1,10 +1,10 @@
 package ChatKata.client;
 
 
-import ChatKata.client.Presenter.ChatPresenter;
-import ChatKata.client.Presenter.LoginPresenter;
-import ChatKata.client.View.ChatView;
-import ChatKata.client.View.LoginView;
+import ChatKata.client.presenter.ChatPresenter;
+import ChatKata.client.presenter.LoginPresenter;
+import ChatKata.client.view.ChatView;
+import ChatKata.client.view.LoginView;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.ui.RootPanel;
 

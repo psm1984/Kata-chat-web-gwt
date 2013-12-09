@@ -1,4 +1,4 @@
-package ChatKata.client.View;
+package ChatKata.client.view;
 
 import com.gwtplatform.mvp.client.UiHandlers;
 

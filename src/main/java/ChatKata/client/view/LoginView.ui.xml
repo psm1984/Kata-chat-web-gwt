@@ -1,11 +1,15 @@
 <ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
              xmlns:g='urn:import:com.google.gwt.user.client.ui'
              xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+    <ui:with field="res" type="ChatKata.client.Resources"/>
+
     <g:HTMLPanel>
         <b:Container>
             <b:Navbar>
                 <b:Brand>Chat Kata</b:Brand>
+                <b:Image resource="{res.logo}"></b:Image>
             </b:Navbar>
+
 
             <b:Collapse ui:field="loginPanelCollapse" defaultOpen="true">
             <b:Container>
@@ -15,24 +19,23 @@
                             <b:Pagination alignment="centered">
                                 <b:Fieldset>
                                     <b:ControlGroup>
-                                        <b:ControlLabel for="input01">Username</b:ControlLabel>
+                                        <b:ControlLabel width="20%">Username</b:ControlLabel>
                                         <b:Controls>
 
-                                            <b:InputAddOn ui:field="usernameCheck" appendIcon="MINUS">
-                                                <b:TextBox ui:field="username" alternateSize="SMALL"
-                                                           placeholder="Username"/>
+                                            <b:InputAddOn ui:field="usernameCheck" appendIcon="REMOVE">
+                                                <b:TextBox width="80%" ui:field="username" alternateSize="SMALL" placeholder="Username"/>
                                             </b:InputAddOn>
 
                                         </b:Controls>
-                                        <b:ControlLabel for="input01">Password</b:ControlLabel>
+                                        <b:ControlLabel width="20%">Password</b:ControlLabel>
                                         <b:Controls>
-                                            <b:InputAddOn ui:field="passwordCheck" appendIcon="MINUS">
-                                                <b:PasswordTextBox ui:field="password" alternateSize="SMALL"
-                                                                   placeholder="Passowrd"/>
+                                            <b:InputAddOn ui:field="passwordCheck" appendIcon="REMOVE">
+                                                <b:PasswordTextBox width="80%" ui:field="password" alternateSize="SMALL"
+                                                                   placeholder="Password"/>
                                             </b:InputAddOn>
                                         </b:Controls>
 
-                                        <b:Button ui:field="sendButton" addStyleNames="btn">Log in</b:Button>
+                                        <b:Button ui:field="sendButton" addStyleNames="btn" icon="LOCK" block="true" iconSize="LARGE">Log in</b:Button>
                                     </b:ControlGroup>
                                 </b:Fieldset>
                             </b:Pagination>

@@ -1,4 +1,4 @@
-package ChatKata.client.Model;
+package ChatKata.client.model;
 
 import com.google.web.bindery.autobean.shared.AutoBean;
 
@@ -12,8 +12,8 @@ public interface IChatMessage {
     void setMessage(String message);
 
     @AutoBean.PropertyName(value="nick")
-    String getNick();
+    String getUsername();
     @AutoBean.PropertyName(value="nick")
-    void setNick(String nick);
+    void setUsername(String nick);
 
 }
