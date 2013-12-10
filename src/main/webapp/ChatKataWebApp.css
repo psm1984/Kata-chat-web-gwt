@@ -12,9 +12,11 @@ h1 {
 
 .sendButton {
   display: block;
-  font-size: 16pt;
+  font-size: 50t;
 }
-
+   .gwt-Button {
+   font-size: 200%;
+   }
 /** Most GWT widgets already have a style name defined */
 .gwt-DialogBox {
   width: 400px;

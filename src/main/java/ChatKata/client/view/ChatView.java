@@ -23,14 +23,6 @@ import com.google.gwt.view.client.ListDataProvider;
 
 import java.util.List;
 
-/**
- * Created with IntelliJ IDEA.
- * User: psm1984
- * Date: 3/12/13
- * Time: 16:02
- */
-
-
 public class ChatView extends Composite implements ChatPresenter.MyView {
     @UiField
     protected Heading welcomeMessage;
@@ -49,7 +41,6 @@ public class ChatView extends Composite implements ChatPresenter.MyView {
     private ChatViewUiBinderHandlers handler;
     interface UiBinderHTMLChatView extends UiBinder<HTMLPanel, ChatView> {}
     private static UiBinderHTMLChatView ourUiBinder = GWT.create(UiBinderHTMLChatView.class);
-
 
 
     public ChatView() {
@@ -108,9 +99,7 @@ public class ChatView extends Composite implements ChatPresenter.MyView {
 
     public void refreshMessages() {
         chatMessagesProvider.refresh();
-        //int totalRowCount = chatMessagesDataGrid.getRowCount();
-
-
+        chatMessagesDataGrid.getRowElement(chatMessagesProvider.getList().size()-1).scrollIntoView();
     }
 
     public void showChatView() {
