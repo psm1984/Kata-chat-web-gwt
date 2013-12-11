@@ -22,7 +22,7 @@ public class ChatPresenter implements ChatViewUiBinderHandlers, ICommunicationSe
     private String username;
     private MyView view;
     private static ChatPresenter chatPresenter;
-    private CommunicationService communicationService;
+    protected CommunicationService communicationService;
     private ChatState chatState;
     private boolean serverStatus = false;
 
@@ -98,7 +98,7 @@ public class ChatPresenter implements ChatViewUiBinderHandlers, ICommunicationSe
     }
 
 
-    private void getMessages() {
+    protected void getMessages() {
         ChatState chatState = ChatState.getChatState();
         int nextSeq = chatState.getNextSeq();
         communicationService.GET(this, Constants.API_REST_GET, nextSeq);

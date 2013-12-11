@@ -14,7 +14,6 @@ public class CommunicationService {
     private final String urlServer;
 
     public CommunicationService(String url) {
-
         this.urlServer = url;
     }
 

@@ -12,6 +12,7 @@
                         <b:DataGrid ui:field="chatMessagesDataGrid"
                                     bordered="true" condensed="false" striped="true"
                                     height="300px" width="100%"
+
                                 />
                         <b:WellForm type="INLINE">
                             <b:TextBox ui:field="messageToSend" alternateSize="LARGE"

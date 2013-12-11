@@ -9,6 +9,7 @@ import com.github.gwtbootstrap.client.ui.*;
 import com.github.gwtbootstrap.client.ui.constants.ButtonType;
 import com.github.gwtbootstrap.client.ui.constants.IconType;
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.dom.client.TableRowElement;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.KeyCodes;
 import com.google.gwt.event.dom.client.KeyUpEvent;
@@ -99,7 +100,11 @@ public class ChatView extends Composite implements ChatPresenter.MyView {
 
     public void refreshMessages() {
         chatMessagesProvider.refresh();
-        chatMessagesDataGrid.getRowElement(chatMessagesProvider.getList().size()-1).scrollIntoView();
+        int lastChatMessagePosition = chatMessagesProvider.getList().size()-1;
+        if (lastChatMessagePosition>0){
+            TableRowElement lastRow = chatMessagesDataGrid.getRowElement(lastChatMessagePosition);
+            if (lastRow!=null) lastRow.scrollIntoView();
+        }
     }
 
     public void showChatView() {
